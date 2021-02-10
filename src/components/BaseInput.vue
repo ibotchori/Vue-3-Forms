@@ -1,21 +1,26 @@
 <template>
   <label>{{ label }}</label>
-  <input :value="modelValue" :placeholder="label" class="field" />
+  <input
+    :value="modelValue"
+    :placeholder="label"
+    @input="$emit('update:modelValue', $event.target.value)"
+    class='field'
+  />
 </template>
 
 <script>
 export default {
-  //Props for template
+  // Props for template
   props: {
     label: {
       type: String,
-      defaul: ""
+      defaul: ''
     },
-    //Value for input
+    // Value for input
     modelValue: {
-      type: [String, Number], //Hello or 30
-      default: ""
+      type: [String, Number], // Hello or 30
+      default: ''
     }
   }
-};
+}
 </script>
