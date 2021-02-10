@@ -14,13 +14,13 @@
       </select>
 
       <h3>Name & describe your event</h3>
-
+  <!-- Component from BaseInput -->
     <BaseInput
     v-model="event.title"
     label="Title"
     type="text"
   />
-
+ <!-- Component from BaseInput -->
   <BaseInput
     v-model="event.description"
     label="Description"
@@ -28,7 +28,7 @@
   />
 
   <h3>Where is your event?</h3>
-
+ <!-- Component from BaseInput -->
   <BaseInput
     v-model="event.location"
     label="Location"
