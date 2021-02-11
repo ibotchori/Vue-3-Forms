@@ -4,9 +4,9 @@
   class="field" 
   :value="modelValue"
   v-bind="{
-    ...$attrs, 
-    onChange: (event) => {$emit('update:modelValue', $event.target.value)}
-  }"
+      ...$attrs,
+      onChange: ($event) => { $emit('update:modelValue', $event.target.value) }
+    }"
   >
     <option
       v-for="option in categories"
