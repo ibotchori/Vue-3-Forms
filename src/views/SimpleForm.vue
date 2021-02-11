@@ -3,23 +3,22 @@
     <h1>Create an event</h1>
     <form>
 
-      <label>Select a category</label>
-      <select v-model="event.category">
-        <option
-          v-for="option in categories"
-          :value="option"
-          :key="option"
-          :selected="option === event.category"
-        >{{ option }}</option>
-      </select>
+  <!-- Component from BaseSelect -->
+    <BaseSelect
+      :options="categories"
+      v-model="event.category"
+      label="Select a category"
+    />
 
       <h3>Name & describe your event</h3>
+
   <!-- Component from BaseInput -->
     <BaseInput
     v-model="event.title"
     label="Title"
     type="text"
   />
+
  <!-- Component from BaseInput -->
   <BaseInput
     v-model="event.description"
@@ -28,6 +27,7 @@
   />
 
   <h3>Where is your event?</h3>
+
  <!-- Component from BaseInput -->
   <BaseInput
     v-model="event.location"
