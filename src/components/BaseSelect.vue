@@ -19,15 +19,18 @@
 
 <script>
 export default {
+  // Props for template
   props: {
     label: {
       type: String,
       default: ''
     },
+    // Value for select
     modelValue: {
       type: [String, Number],
       default: ''
     },
+    // Array for select options
     options: {
       type: Array,
       required: true
