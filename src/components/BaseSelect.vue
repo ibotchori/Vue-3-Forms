@@ -1,7 +1,7 @@
 <template>
-  <label v-if="label">{{label}}</label> 
-  <select 
-  class="field" 
+  <label v-if="label">{{label}}</label>
+  <select
+  class="field"
   :value="modelValue"
   v-bind="{
       ...$attrs,
