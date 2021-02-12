@@ -16,10 +16,9 @@ export default {
       default: ''
     },
     modelValue: {
-        type: Boolean,
-        default: false
+      type: Boolean,
+      default: false
     }
   }
 }
 </script>
-
