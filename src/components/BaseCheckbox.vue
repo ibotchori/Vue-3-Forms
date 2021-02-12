@@ -1,7 +1,8 @@
 <template>
   <input
     type="checkbox"
-    v-model="event.extras.catering"
+    :checked="modelValue"
+    @change="$emit('update:modelValue', $event.target.checked)"
     class="field"
   />
   <label v-if="label">{{ label }}</label>
@@ -13,7 +14,12 @@ export default {
     label: {
       type: String,
       default: ''
+    },
+    modelValue: {
+        type: Boolean,
+        default: false
     }
   }
 }
 </script>
+
