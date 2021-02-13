@@ -49,7 +49,7 @@
         <BaseRadio
           v-model="event.pets"
           :value="0"
-          label="Nო"
+          label="No"
           name="pets"
         />
       </div>
