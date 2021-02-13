@@ -4,16 +4,16 @@
     <form>
 
   <!-- Component from BaseSelect -->
-    <BaseSelect
-      :options="categories"
-      v-model="event.category"
-      label="Select a category"
-    />
+  <BaseSelect
+    :options="categories"
+    v-model="event.category"
+    label="Select a category"
+  />
 
       <h3>Name & describe your event</h3>
 
   <!-- Component from BaseInput -->
-    <BaseInput
+  <BaseInput
     v-model="event.title"
     label="Title"
     type="text"
@@ -37,38 +37,36 @@
 
       <h3>Are pets allowed?</h3>
       <div>
-        <input
-            type="radio"
-            v-model="event.pets"
-            :value="1"
-            name="pets"
-          />
-        <label>Yes</label>
+        <BaseRadio
+          v-model="event.pets"
+          :value="1"
+          label="Yes"
+          name="pets"
+        />
       </div>
 
       <div>
-        <input
-          type="radio"
+        <BaseRadio
           v-model="event.pets"
           :value="0"
+          label="Nო"
           name="pets"
         />
-        <label>No</label>
       </div>
 
       <h3>Extras</h3>
       <div>
-      <BaseCheckbox
-        v-model="event.extras.catering"
-        label="Catering"
-      />
+        <BaseCheckbox
+          v-model="event.extras.catering"
+          label="Catering"
+        />
       </div>
 
       <div>
-      <BaseCheckbox
-        v-model="event.extras.music"
-        label="Live music"
-      />
+        <BaseCheckbox
+          v-model="event.extras.music"
+          label="Live music"
+        />
       </div>
 
       <button class="button -fill-gradient" type="submit">Submit</button>
