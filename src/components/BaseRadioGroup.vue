@@ -2,7 +2,7 @@
   <BaseRadio 
     v-for="option in options"
     :key="option.value"
-    :label="optio.label"
+    :label="option.label"
     :value="option.value"
     :name="name"
   />
