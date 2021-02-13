@@ -1,10 +1,12 @@
 <template>
-  <BaseRadio 
+  <BaseRadio
     v-for="option in options"
     :key="option.value"
     :label="option.label"
     :value="option.value"
     :name="name"
+    :modelValue="modelValue"
+    @update:modelValue="$emit('update:modelValue', $event)"
   />
 </template>
 
@@ -17,6 +19,10 @@ export default {
     },
     name: {
       type: String,
+      required: true
+    },
+    odelValue: {
+      type: [String, Number],
       required: true
     }
   }
