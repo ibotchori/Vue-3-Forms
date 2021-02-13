@@ -1,9 +1,10 @@
 <template>
   <input
       type="radio"
-      v-model="event.pets"
-      :value="1"
-      name="pets"
+      :checked="modelValue === value"
+      :value="value"
+      v-bind="$attrs"
+      @change="$emit('update:modelValue', value)"
     />
   <label v-if="label">{{ label }}</label>
 </template>
