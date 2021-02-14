@@ -98,7 +98,16 @@ export default {
   },
   methods: {
     sendForm () {
-      // We will handle form submission here!
+      axios.post(
+        'https://my-json-server.typicode.com/koregeo/Vue-3-Forms/events',
+        this.event
+      )
+        .then(function (response) {
+          console.log('Response', response)
+        })
+        .catch(function (err) {
+          console.log('Error', err)
+        })
     }
   }
 }
